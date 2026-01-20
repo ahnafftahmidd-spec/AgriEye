@@ -1,16 +1,16 @@
-# Hardware Overview
+# AgriEye Hardware
 
-This folder contains all hardware-related information for the AgriEye UAV.
+This folder documents the physical components of the AgriEye UAV.
 
-## Core Components
-- Raspberry Pi (Flight Controller)
-- Brushless DC Motor (Pusher Configuration)
+## Main Components
+- Raspberry Pi (Main controller)
+- Brushless Motor (Pusher)
 - ESC (30A)
 - LiPo Battery (3S)
-- Servos (Aileron, Elevator, Rudder)
-- RC Receiver & Transmitter
+- Servos (Ailerons, Elevator, Rudder)
+- RC Receiver
 - IMU Sensor
 - GPS Module
 
-## Notes
-Detailed wiring diagrams and part numbers will be added in future updates.
+## Status
+Hardware integration planned. No live flight testing yet.
