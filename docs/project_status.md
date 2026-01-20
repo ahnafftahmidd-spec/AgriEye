@@ -1,15 +1,15 @@
-# AgriEye Project Status
+# AgriEye – Project Status
 
-## Current Phase
-Early development and planning stage.
+## Phase
+Early Development
 
 ## Completed
-- Repository setup
-- Folder structure created
-- License applied
-- Starter code added
+- GitHub repository setup
+- Folder structure
+- Starter flight logic
+- Safety system design
 
-## Next Goals
+## Upcoming
 - Sensor integration
-- Manual flight control logic
-- Autonomous waypoint navigation
+- Real RC input handling
+- Autonomous navigation logic
