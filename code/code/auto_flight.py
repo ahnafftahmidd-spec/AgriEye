@@ -1,7 +1,8 @@
 """
-AgriEye – Autonomous Flight (Starter)
-Waypoint navigation logic (simulation)
+AgriEye – Autonomous Flight Mode (Simulation)
 """
+
+from obstacle_avoidance import check_for_obstacle
 
 WAYPOINTS = [
     (23.7806, 90.2794),
@@ -9,20 +10,15 @@ WAYPOINTS = [
     (23.7815, 90.2798),
 ]
 
-def get_current_position():
-    # Fake GPS data for now
-    return (23.7806, 90.2794)
-
-def navigate():
-    print("Autonomous Mode Active")
-    for wp in WAYPOINTS:
-        print(f"Navigating to waypoint: {wp}")
-
 def auto_mode():
-    current_pos = get_current_position()
-    print(f"Current Position: {current_pos}")
-    navigate()
-    print("Mission Complete")
+    print("Autonomous Mode Active")
 
-if __name__ == "__main__":
-    auto_mode()
+    for wp in WAYPOINTS:
+        print(f"Heading to waypoint: {wp}")
+
+        obstacle = check_for_obstacle()
+        if obstacle:
+            print("Changing path to avoid obstacle")
+            break
+
+    print("Autonomous mission ended safely")
