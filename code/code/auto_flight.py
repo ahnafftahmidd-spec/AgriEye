@@ -4,6 +4,7 @@ AgriEye – Autonomous Flight Mode (Simulation)
 
 from obstacle_avoidance import check_for_obstacle
 from ai_vision import run_ai_vision
+from data_logger import log_data
 
 WAYPOINTS = [
     (23.7806, 90.2794),
@@ -17,16 +18,17 @@ def auto_mode():
     for wp in WAYPOINTS:
         print(f"Flying to waypoint: {wp}")
 
-        # AI Vision Check
         ai_results = run_ai_vision()
-
-        if ai_results["dry_area"]:
-            print("Dry area detected – marking location")
-
-        # Obstacle Avoidance
         obstacle = check_for_obstacle()
+
+        log_data(
+            waypoint=wp,
+            ai_data=ai_results,
+            obstacle=obstacle
+        )
+
         if obstacle:
-            print("Obstacle detected – rerouting")
+            print("Obstacle detected – ending mission safely")
             break
 
-    print("Autonomous mission completed safely")
+    print("Autonomous mission completed")
